@@ -259,7 +259,7 @@ github都可以的
 >
 > 
 
-## 立场EDA打不开eprj文件
+## 立创EDA打不开eprj文件
 
 日志显示：[错误] : 同步云端数据失败! SQLITE_ERROR: no such column: t1.parent_uuid
 

@@ -496,5 +496,84 @@ value其实属于该元件的一个参数parameter，默认元件是没有任何
 
 在AD中的一个芯片连接了5v电源，并且引脚类型是input，导致编译的时候显示Net 5V has no driving source ，后面在原理图库中将该引脚改成passive后warnning消失。在此我试了下，应该是有input就需要有output，否则就会报错
 
+## PCB布线注意事项
 
+### 过孔扇出
+
+<img src="E:\Typora\assets\image-20241219230303410.png" alt="image-20241219230303410" style="zoom: 33%;" />
+
+
+
+<img src="E:\Typora\assets\image-20241219230748447.png" alt="image-20241219230748447" style="zoom:33%;" />
+
+<img src="E:\Typora\assets\image-20241219230855598.png" alt="image-20241219230855598" style="zoom:33%;" />
+
+![image-20241219230952516](E:\Typora\assets\image-20241219230952516.png)
+
+3W原则：假如线宽是6mil，==中心间距==就需要18mil，而设计规则中的是Track到Track,也就是线边到线边，所以就应该设置成12mil就可以。但是不是所有的线都需要遵守这个原则，可以搭配Class来使用，重要的线用这个原则。
+
+![image-20241219231448964](E:\Typora\assets\image-20241219231448964.png)
+
+![image-20241219231755175](E:\Typora\assets\image-20241219231755175.png)
+
+### 模块内部的走线
+
+ctrl+左键点击可以高亮同网络的焊盘，取消的话按住点击空白区域
+
+==铺铜后打过孔的时候担心打到焊盘上，可以快捷键ctrl+d调出view configuration,调节铺铜透明度即可，==有些走线也可以这么做
+
+<img src="E:\Typora\assets\image-20241220160814381.png" alt="image-20241220160814381" style="zoom:33%;" />
+
+<img src="E:\Typora\assets\image-20241222233954484.png" alt="image-20241222233954484" style="zoom:25%;" />
+
+<img src="E:\Typora\assets\image-20241220161143482.png" alt="image-20241220161143482" style="zoom:33%;" />
+
+有时候铺铜选上网络了也铺不上铜，可能是因为该网络选择的是十字连接，二者间距太小，连不上，
+
+这里up主的做法是复制该网络，之后加到PWR网络类中去，（提前设置了PWR使用全连接了）
+
+另外有时候铺铜的时候会有缝隙，如下图
+
+<img src="E:\Typora\assets\image-20241220161611048.png" alt="image-20241220161611048" style="zoom:33%;" />
+
+因为避让了走线，所以有缝隙，解决办法如下图，选择铺所有的铜即可
+
+<img src="E:\Typora\assets\image-20241220161725459.png" alt="image-20241220161725459" style="zoom:33%;" />
+
+有时候走线和铺铜会弄到板框外，解决办法是把机械层的板框复制一下，之后使用E---A，特殊粘贴，复制到keepout层中即可，铺铜还得勾选去除死铜才可以，要不板框外面会有死铜。
+
+<img src="E:\Typora\assets\image-20241222234610065.png" alt="image-20241222234610065" style="zoom:33%;" />
+
+如上图，注意不要所有的铺铜都打过孔，电流是有路径的，如果打到滤波电容后面了，就没法滤波了。
+
+<img src="E:\Typora\assets\image-20241222235421654.png" alt="image-20241222235421654" style="zoom:50%;" />
+
+有时候走线会跟随上一次的线宽走，在如上图设置中更改下即可。
+
+自动打孔切层网上搜快捷键即可，记得换成英文输入法
+
+### 电源层处理
+
+![image-20241225232055825](E:\Typora\assets\image-20241225232055825.png)
+
+在pcb中选择nets,更改网络颜色后，变成格点这种，可以更改
+
+![image-20241225232222639](E:\Typora\assets\image-20241225232222639.png)
+
+在设置--PCB Editor--Board Insight Coloe...改成实心覆盖就会变成实心的了。
+先布简单的，后布复杂的，可以先从顶层底层走一部分电源线，复杂的pwr层铺铜
+
+### GND层处理
+
+这个课程没有区分模拟地数字地，直接铺铜的
+
+顶层和底层也会铺GND的铜
+
+如何快速看是否还剩下的有飞线
+
+<img src="E:\Typora\assets\image-20241226231124063.png" alt="image-20241226231124063" style="zoom:33%;" />
+
+在PCB界面中，选择NETS，上图箭头所指位置如果是0，就是没有飞线，或者后续drc也可以检测出来
+
+这个课程的电源和底层都是正片层
 
