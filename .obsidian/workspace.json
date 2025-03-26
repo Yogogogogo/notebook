@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Typora习题.md",
+                "file": "软件学习.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Typora习题"
+              "title": "软件学习"
             }
           }
         ]
@@ -162,10 +162,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7bef2694f678d8c6",
+  "active": "5d4d5626dd321c65",
   "lastOpenFiles": [
-    "立创EDA.md",
     "Typora习题.md",
+    "立创EDA.md",
     "AD20(凡亿教育).md",
     "AD24(JHP硬件实验室).md",
     "STM32问题及解决方案.md",

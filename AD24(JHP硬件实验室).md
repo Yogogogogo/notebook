@@ -577,3 +577,8 @@ ctrl+左键点击可以高亮同网络的焊盘，取消的话按住点击空白
 
 这个课程的电源和底层都是正片层
 
+## 如何调整原理图符号Designator和Comment的默认位置
+
+1. 在原理图符号编辑界面下打开属性或者运行“工具”——“文档选项”，把show Comment/Designator勾上，这样就可以把这两项显示出来。
+2. 调整Comment和Designator的位置，然后分别选中它们，在各自的属性中把Autoposition的打勾去掉。
+3. 保存之后，在原理图中放置该器件，Comment和Designator就出现在调整后的位置。
