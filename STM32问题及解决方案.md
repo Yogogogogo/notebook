@@ -273,3 +273,67 @@ github都可以的
 
 有两个任务不可以自动启动，可能是火绒等杀毒软件阻挡了，具体是哪两个任务我这里忘记了，到时候上网搜即可
 
+## Sourcetree git 出现 The server‘s host key is not cached in the registry问题的解决办法
+
+[Sourcetree git 出现 The server‘s host key is not cached in the registry问题的解决办法_the host key is not cached for this server:-CSDN博客](https://blog.csdn.net/Player1MacHN/article/details/129137060#:~:text=Sourcetree会自带plink，用命令行切换到plink.exe所在路径，并执行plink git@github.com 命令，根据提示输入y 回车，问题就解决了。 _the host,key is not cached for this server%3A)
+
+![image-20250327140347406](E:\Typora\assets\image-20250327140347406.png)
+
+在工具--选项，把SSH客户端改成OpenSSH就可以了，还有另一种方法比较麻烦。
+
+我的理解是这样的：私钥是留在自己电脑上以方便和远端的公钥进行配对的。
+
+## 安装Jlink驱动后设备显示器中识别成ULIK interface
+
+安装jlink驱动后在设备显示器中显示的不是jlink,识别成了....interface,解决方法如下：
+
+> 安装Keil MDK时都会顺带安装JLink驱动，在如下目录/keil_v5/ARM/Segger
+>
+> 在设备管理器中找到JLink，鼠标右击选择更新驱动程序，选择浏览我的电脑以查找驱动程序，然后根据Keil安装的路径找到Segger文件中，安装或更新即可。
+>
+> ![img](assets/feb8280ee312166fa29cfc84ca985932.png)
+>
+> ![img](assets/8e34d56ca5018d8db72b2ae991ed6e2a.png)
+
+原文链接：[JLink驱动设备管理器中显示黄色感叹号_设备管理器找不到jlink驱动-CSDN博客](https://blog.csdn.net/weixin_42727214/article/details/125332911)
+
+##  FreeMaster的Plug-in module没有任何显示
+
+安装过程与运行具有管理员权限的“c:\NXP\FreeMASTER 3.0\FreeMASTER\register.bat”相同。如果重新安装没有帮助，在cmd控制台窗口(以管理员身份启动)手动运行该文件即可。
+
+推荐首先试试运行下这个bat文件
+
+原文链接：[FreeMaster 中 Plug-in Module 显示空白的问题_freemaster plug-in module-CSDN博客](https://blog.csdn.net/weixin_43086497/article/details/109120673)
+
+[FreeMaster的Plug-in module没有任何显示 - Kinetis - 恩智浦技术社区](https://www.nxpic.org.cn/module/forum/thread-620761-1-1.html)
+
+## ORCAD无法运行DRC
+
+OrCAD 23.10.S001补丁 运行不了Design Ruler Check的问题解决了，可以打开软件安装路径下比如C:\Cadence\SPB_23.1\tools\bin，修改orCefSettings.ini文件，添加一行lang=en-US 保存即可，注意关闭软件情况下修改。
+
+原文链接：[hotfix spb 23.10.001，7天有效 - 第4页 - Cadence Allegro论坛 - EDA365电子论坛网](https://www.eda365.com/forum.php?mod=viewthread&tid=737349&page=4#pid2955909)
+
+## Freemaster界面显示异常
+
+界面显示在波形的参数设置中有部分显示不全
+
+![image-20250418114338014](assets/image-20250418114338014.png)
+
+> **第一步：**
+>
+> 在桌面软件快捷方式的图标上按鼠标右键，在弹出的对话框中选择【**属性】，**进入到属性界面，并在属性界面选择【**兼容性】，**然后在兼容性下点击【**更改[高DPI设置](https://zhida.zhihu.com/search?content_id=173363924&content_type=Article&match_order=1&q=高DPI设置&zhida_source=entity)】。**
+>
+> **第二步：**
+>
+> 在新弹出的对话框中**勾选 【替代高DPI缩放行为。】，**然后点开下拉框，在【**缩放执行**】中选择【**系统(增强)】，**然后点击【**确定】**
+>
+> **第三步：**
+>
+> 在弹出来的对话框中依次点击【**应用**】，【**确定**】------**大功告成！**
+>
+> Tips：第二步，勾选上方程序DPI下的使用此设置修复程序缩放问题，下面的高DPI缩放替代改成应用程序，再打开软件就不糊了。
+>
+> 程序DPI下面都写了如果显示器DPI发生改变，程序可能变糊，win可以根据显示器设置的DPI修复程序缩放问题，当然要勾了。
+
+原文链接：[屏幕分辩率太高了,软件不适配，1分钟解决！ - 知乎](https://zhuanlan.zhihu.com/p/383550910#:~:text=本文的重点来了，只需要1分钟就可以解决高分辩率屏部分软件不正常显示的问题！ 喜欢的网友给个赞！ 在桌面软件快捷方式的图标上按鼠标右键，在弹出的对话框中选择【属性】， 进入到属性界面，并在属性界面选择【兼容性】， 然后在兼容性下点击【更改 高DPI设置】。,在新弹出的对话框中 勾选 【替代高DPI缩放行为。 】， 然后点开下拉框，在【缩放执行】中选择【系统 (增强)】， 然后点击【确定】)
+

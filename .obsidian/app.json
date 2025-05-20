@@ -1,3 +1,6 @@
 {
-  "attachmentFolderPath": "./images"
+  "attachmentFolderPath": "./images",
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "autoConvertHtml": true
 }
