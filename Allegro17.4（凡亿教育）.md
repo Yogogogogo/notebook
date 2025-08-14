@@ -371,7 +371,13 @@ allegro的第三方网表是.NET文件
 
 最后一个问题是不需要解决的
 
+## PCB封装库
 
+### Padstack Editor工具介绍
+
+封装由两部分组成，焊盘+封装
+
+封装的创建需要使用到两个工具，Padstack Editor用来绘制焊盘，PCB Editor用来绘制封装
 
 
 
