@@ -387,6 +387,8 @@ allegro的第三方网表是.NET文件
 
 ### PCB封装库组成元素介绍
 
+==焊盘文件是以pad为结尾的，封装是以bra后缀为结尾的==
+
 ![image-20250816160529007](assets/image-20250816160529007.png)
 
 ### PCB Editor软件创建贴片封装(以STM32为例)
@@ -414,5 +416,53 @@ allegro的第三方网表是.NET文件
 > ![image-20250816163836344](assets/image-20250816163836344.png)2.填写封装名称，Type选择package symbol,电机Browse选择封装存储路径
 >
 > ![image-20250816164230188](assets/image-20250816164230188.png)
+>
+> 3.之后设置参数
+>
+> ![image-20250818233940805](./Allegro17.4（凡亿教育）.assets/image-20250818233940805.png)
+>
+> Setup–>—>Design Parameters—>Design:更改单位和精度，以及Extents(貌似是拓展的意思)的X和Y数值，视频中是-100，-100
+>
+> 4.添加焊盘路径
+>
+> Setup—>User preferences—>Path—>Library—>padpath
+>
+> ![image-20250818235250450](./Allegro17.4（凡亿教育）.assets/image-20250818235250450.png)
+>
+> 5.放置焊盘
+>
+> Layout—>pins
+>
+> ![image-20250818235344867](./Allegro17.4（凡亿教育）.assets/image-20250818235344867.png)
+>
+>  ![image-20250818235543668](./Allegro17.4（凡亿教育）.assets/image-20250818235543668.png)
+>
+> 之后在后面中随便点一下(应该是选择放置位置)，之后在右侧选择Options,在padstack中选择需要的焊盘，设置QTY（数量），由于是从一号管教开始放一共九个，故填9，spacing（引脚间距）为0.5mm，Order是往右边放，故选right,角度旋转90度，pin从1开始，inc增量为1，offset是管脚字符偏移，都改为0，最后在界面最下方输入坐标
+>
+> ![image-20250819000212950](./Allegro17.4（凡亿教育）.assets/image-20250819000212950.png)
+>
+> ​	![image-20250819000858795](./Allegro17.4（凡亿教育）.assets/image-20250819000858795.png)
+>
+> **放置坐标格式为x->空格->横坐标->空格->纵坐标**
+>
+> ![image-20250819001123351](./Allegro17.4（凡亿教育）.assets/image-20250819001123351.png)
+>
+> **==之后再接着放右侧的一排焊盘，需要再次点解Layout—>Pins进行放置==**
+>
+> ![image-20250819001408083](./Allegro17.4（凡亿教育）.assets/image-20250819001408083.png)
+>
+> ![image-20250819001618122](./Allegro17.4（凡亿教育）.assets/image-20250819001618122.png)
+>
+> 6.绘制丝印线和装配线
+>
+> 一般是先画丝印先
+>
+> Add—>Line
+>
+> ![image-20250819001805647](./Allegro17.4（凡亿教育）.assets/image-20250819001805647.png)
+>
+> 
+>
+> 
 >
 > 
