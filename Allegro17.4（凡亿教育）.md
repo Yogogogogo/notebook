@@ -413,7 +413,7 @@ allegro的第三方网表是.NET文件
 
 > 1.打开软件-->File-->New，然后会出来一个弹窗，选择NO即可（应该是打开软件就默认有一个unname的文件导致的）
 >
-> ![image-20250816163836344](assets/image-20250816163836344.png)2.填写封装名称，Type选择package symbol,电机Browse选择封装存储路径
+> ![image-20250816163836344](assets/image-20250816163836344.png)2.填写封装名称，Type选择package symbol,点击Browse选择封装存储路径
 >
 > ![image-20250816164230188](assets/image-20250816164230188.png)
 >
