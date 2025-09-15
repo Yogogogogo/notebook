@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Typora"
             }
+          },
+          {
+            "id": "de71e6ae830ad832",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.9.12"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -155,6 +168,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -163,7 +177,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3644611a5f751f40",
+  "active": "de71e6ae830ad832",
   "lastOpenFiles": [
     "Typora习题.md",
     "STM32问题及解决方案.md",
