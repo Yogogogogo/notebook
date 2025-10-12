@@ -677,5 +677,28 @@ ctrl+左键点击可以高亮同网络的焊盘，取消的话按住点击空白
 
 
 
+## Altium designer的端口port名字，导入PCB后为其他网络名称？如何使导入PCB的网络名称与port名字一致
+
+在Altium designer **工程-->工程参数 ，option选项卡中**，有一项 **允许端口命名网络** 勾上即可。
+
+[![img](assets/2f738bd4b31c87013349f4ea297f9e2f0708ff3b.png)](https://iknow-pic.cdn.bcebos.com/2f738bd4b31c87013349f4ea297f9e2f0708ff3b)
+
+在默认配置下，Port仅用于实现跨原理图的逻辑连接，不具有电气属性。真正的电气网络名称仍然依赖于NetLabel或Powerport才能建立并同步到PCB的。
+你画图的时候对应网络上还是得放置NetLabel或者PowerPort才能指定命名，否则会按默认规则生成（同网络元件标识最小的那个加上其管脚序号）。
+
+> 原文链接：[Altium designer的端口port名字，导入PCB后为其他网络名称？如何使导入PCB的网络名称与port名字一致_百度知道](https://zhidao.baidu.com/question/1866727769917391307.html)
+
+## **离图连接器和网络标签不能同名**
+
+在AD原理图中，同一页原理图中网络端口和和网络标签不能重名，会报
+
+Duplicate Net Names Wire Lamp_IS_SEL
+
+这个错误，解决办法是在网络端口后面再加上网络标签即可
+
+另外还有个问题就是网络标签和网络端口的作用域是不同的，在多页原理图中网络端口后面尽量还是再加一个网络标签
+
+同一页原理图中同网络的最好只有一个网络端口，其他的用网络标签，要不会报错
+
 
 
