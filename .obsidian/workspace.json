@@ -25,12 +25,14 @@
             "id": "de71e6ae830ad832",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.9.12"
+                "file": "AD20(凡亿教育).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.9.12"
+              "icon": "lucide-file",
+              "title": "AD20(凡亿教育)"
             }
           }
         ],
@@ -107,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AD24(JHP硬件实验室).md",
+                "file": "AD20(凡亿教育).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "AD24(JHP硬件实验室) 的反向链接列表"
+              "title": "AD20(凡亿教育) 的反向链接列表"
             }
           },
           {
@@ -153,18 +155,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AD24(JHP硬件实验室).md"
+                "file": "AD20(凡亿教育).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "AD24(JHP硬件实验室) 的大纲"
+              "title": "AD20(凡亿教育) 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,7 +182,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "de71e6ae830ad832",
+  "active": "7bef2694f678d8c6",
   "lastOpenFiles": [
     "Typora习题.md",
     "STM32问题及解决方案.md",
