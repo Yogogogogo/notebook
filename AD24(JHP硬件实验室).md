@@ -702,5 +702,62 @@ Duplicate Net Names Wire Lamp_IS_SEL
 
 同一页原理图中同网络的最好只有一个网络端口，其他的用网络标签，要不会报错
 
+## 规则设置
+
+![img](assets/v2-e0db21c823b3dc40e00857a4f2207294_r.jpg)
+
+- 对于电气规则
+  唯一要注意的是间距规则，即走线、焊盘、过孔，铜皮等这些对象相互之间的间距。通常设置为6mil或10mil（如果空间足够可以10mil），如果小于6mil的话，生产工艺会更困难，所以对应的成本也会增加。
+
+![img](assets/v2-c559da87d76d9a952f0c8752e46c8eac_1440w.jpg)
 
 
+
+- 对于走线规则
+  首先是线宽设置，由于本人经常接触的是电源走线，因此线宽一般设置为20mil（对于要过大电流的走线，一般直接铺宽铜），对于经常接触弱电走线的，线宽一般设置为6mil或10mil。
+
+![img](assets/v2-785e6b21196bf4e1fd56d02c05a57c69_1440w.jpg)
+
+
+下一个是走线过孔规则。
+
+![img](assets/v2-5d189ec0be6a4834f27d84be48c8191c_1440w.jpg)
+
+
+
+- 对于平面规则
+  唯一要设置的是[铺铜连接设置](https://zhida.zhihu.com/search?content_id=243644297&content_type=Article&match_order=1&q=铺铜连接设置&zhida_source=entity)。电源相关的铺铜一般是走大电流的情况，因此一般直接连接，不留空隙。
+
+![img](assets/v2-e21df566fb9bdd4076593aea53432f0a_1440w.jpg)
+
+
+
+- 对于生产制造规则
+  首先是[过孔大小规则](https://zhida.zhihu.com/search?content_id=243644297&content_type=Article&match_order=1&q=过孔大小规则&zhida_source=entity)设置。由于有时可能会用过孔作为铜柱插口，因此最大孔径可以设大点。
+
+![img](assets/v2-1d6272051904f58f349bf143e91afd61_1440w.jpg)
+
+
+下一个是过孔到过孔间距设置，一般只要保证过孔不要重叠就行，所以设置为12mil。
+
+![img](assets/v2-21ba4f827ffc02547f4733f0b995da65_1440w.jpg)
+
+
+下一个是最小[阻焊层裂口设置](https://zhida.zhihu.com/search?content_id=243644297&content_type=Article&match_order=1&q=阻焊层裂口设置&zhida_source=entity)，一般设置为4mil。对于高密度PCB设计，如果制造商具备高精度加工能力，最小阻焊层裂口宽度可以减小到3mil或甚至更小。
+
+![img](assets/v2-8032075abc1bc11d41d13f4db0f916b8_1440w.jpg)
+
+
+最后是[丝印到丝印和丝印到焊盘的间距设置](https://zhida.zhihu.com/search?content_id=243644297&content_type=Article&match_order=1&q=丝印到丝印和丝印到焊盘的间距设置&zhida_source=entity)，这两个规则不会影响电路和生产制造，在后期移动丝印时注意下就好，确保所有丝印都可以看到，尽量不要和焊盘或丝印重叠。这两个规则可以设置为0mil或关闭。
+设置为0mil。
+
+![img](assets/v2-5c14f8706c327e625bfd6261eacd3603_1440w.jpg)
+
+
+或关闭。
+
+![img](assets/v2-610193654dca62d3d8d88c59e240cc13_1440w.jpg)
+
+
+
+至此，所有规则已设置完成。最后点击应用，再点击确定即可。
