@@ -784,3 +784,55 @@ keepout层的作用是限制铺铜及走线
 
 经测试，应该是路径有中文的原因
 
+## Solidworks打开文件显示资源不足
+
+Solidworks Resource Monitor 可供使用的系统内存很低。请关闭一些应用程序以释放资源。
+
+![img](assets/c9f9dd22eb5d47eea1f5d236996befed.png)
+
+可行的方案是：系统选项 > 导入，文件格式 > 普通，去掉“启用3D Interconnect”，“自动运行输入诊断-愈合”，“进行完全实体检查并修正错误”这3项的勾选，或者干脆去掉除“实体和曲面”以外的所有勾选。
+
+![img](assets/eb02902b7a20463e8bdcfc6e35fd63ed.png)
+
+然后切换到默认模板位置，零件和装配体模板分别选择gb_part.prtdot，gb_assembly.asmdot.
+
+![img](assets/2160048cdda64888bf8b5f104da54c27.png)
+
+
+
+> 原文链接：[解决Solidworks 2024运行的Windows资源极低，执行此命令可能会导致SOLIDWORKS 失败。_solidworks运行的windows资源极低-CSDN博客](https://blog.csdn.net/pijianzhirui/article/details/140918151)
+>
+> 另一篇知乎文章下的评论说设置模板就可以解决
+
+## Solidworks打开文件是空白的
+
+### 方案1：装配体默认模板问题
+
+解决：
+
+![img](assets/v2-32c768a963acbba954717aa90a3c77be_1440w.jpg)
+
+![img](assets/v2-75d1fb94a1274a6af88c7a169ff25b67_1440w.jpg)
+
+![img](assets/v2-365852dc8bd7d7ccf9ef07183591d49e_1440w.jpg)
+
+模板我在上一个问题的解决中就更改过，但是没有用，我碰到的问题可能不是这个 -by yql
+
+### 问题2：打开SolidWorks [3D Interconnect](https://zhida.zhihu.com/search?content_id=235151049&content_type=Article&match_order=1&q=3D+Interconnect&zhida_source=entity) 功能导入step模型不显示
+
+解决：可以按照我的进行设置
+
+![img](assets/v2-ba08b47891987bbbb5b75da9ce967ec1_1440w.jpg)
+
+![img](assets/v2-42b36c434ab8102a6f5051dca44f925f_1440w.jpg)
+
+更改后问题得到解决
+
+![image-20260320105221777](assets/image-20260320105221777.png)
+
+> 原文链接：[(44 封私信 / 71 条消息) SolidWorks 打开stp/step不显示解决办法 - 知乎](https://zhuanlan.zhihu.com/p/661600802)
+
+## solidworks怎么导出零件的二维数据
+
+经过自己简单测试，选中那一面然后另存为dwg文件就可以了
+
